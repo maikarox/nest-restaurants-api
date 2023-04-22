@@ -1,4 +1,5 @@
 import { Module } from '@nestjs/common';
+import { ConfigModule } from '@nestjs/config';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
@@ -11,6 +12,7 @@ const { type, host, port, user: username, password, name: database } = dbConfig;
 @Module({
   imports: [
     RestaurantsModule,
+    ConfigModule.forRoot(),
     TypeOrmModule.forRoot({
       type,
       host,
