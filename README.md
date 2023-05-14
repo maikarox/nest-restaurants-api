@@ -1,4 +1,4 @@
-# Nest restaurants API
+# NestJS restaurants API
 
 ## Description
 
